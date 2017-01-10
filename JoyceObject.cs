@@ -17,16 +17,10 @@ abstract public class JoyceObject : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {
 
-        //if (other.gameObject.name.Equals("ObjectArea"))
-        //{
-            // PUT CODE IN HERE
-        //}
-
         if ( (other.gameObject.name.Equals("Head") || (other.gameObject.name.Equals("Body"))) && !DialogueHasPlayed && canPlayDialogue)
         {
             DialogueHasPlayed = true;
             source.PlayOneShot(Dialogue);
-            // TODO: turn down vol of music while this is playing!!
         }
     }
 
