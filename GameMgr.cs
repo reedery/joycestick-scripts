@@ -12,9 +12,7 @@ public class GameMgr : MonoBehaviour {
     void Start () {
         nextTask();
     }
-	
-	// Update is called once per frame
-	void Update () { }
+
 
     public static void addToManagerList(JoyceObject obj)
     {
@@ -32,14 +30,13 @@ public class GameMgr : MonoBehaviour {
         {
             incrementCurrentObject();
             // reset stingers (strings and bells) to 0f
-      
             EnableCurrentObject();
         }
     }
     
     private static void EnableCurrentObject()
     {
-        Debug.Log(currentObj.name); // PRINT NAME OF ENABLED OBJECT
+        Debug.Log(currentObj.name); 
         currentObj.EnableSelf();
     }
 
